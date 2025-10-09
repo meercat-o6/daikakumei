@@ -1,0 +1,53 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+// リセットCSS
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-family-mincho;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $text-color;
+    background-color: $bg-dark;
+    background-image: $background-pattern;
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: 0 0;
+}
+
+// ユーティリティクラス
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @include mobile {
+        padding: 0 $spacing-sm;
+    }
+}
+
+.section__title {
+    @include section-title;
+}
+
+// スクリーンリーダー用
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

@@ -1,0 +1,900 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+// ヒーローセクション
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 $spacing-lg;
+    background-color: $bg-dark;
+    background-image: none; // ヒーローセクションでは背景画像を無効化
+    overflow: hidden;
+
+    // フルブリード背景画像
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.35;
+        filter: saturate(1.1) contrast(1.05);
+        transition: opacity $transition-slow;
+    }
+
+    // 黒グラデーションで文字の可読性を担保
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.6) 0%,
+            rgba(0, 0, 0, 0.8) 60%,
+            rgba(0, 0, 0, 0.95) 100%
+        );
+        pointer-events: none;
+    }
+
+    @include mobile {
+        flex-direction: column;
+        text-align: center;
+        padding: 6rem $spacing-sm $spacing-lg;
+    }
+
+    &__logo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        @include flex-center;
+        color: $secondary-color;
+        font-family: $font-family-serif;
+        font-size: 4rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        
+        @include mobile {
+            font-size: 3rem;
+        }
+    }
+}
+
+// 大革命についてセクション（カルーセル）
+.about {
+    height: 100vh;
+    background-color: $bg-light;
+    background-image: $background-pattern;
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: 0 0;
+    color: $secondary-color;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    
+    &__content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 $spacing-xl;
+        max-width: 1400px;
+        margin: 0 auto;
+        
+        @include mobile {
+            padding: 0 $spacing-sm;
+        }
+    }
+    
+    &__header {
+        text-align: center;
+        margin-bottom: $spacing-xl;
+        
+        @include mobile {
+            margin-bottom: $spacing-lg;
+        }
+    }
+    
+    &__title {
+        font-family: $font-family-serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-top: 6rem;
+        margin-bottom: $spacing-xs;
+        color: $secondary-color;
+        
+        @include mobile {
+            font-size: 2rem;
+        }
+    }
+    
+    &__subtitle {
+        font-size: 0.875rem;
+        font-weight: 500;
+        letter-spacing: 0.2em;
+        margin-bottom: 0;
+        color: $text-light;
+    }
+    
+    &__carousel {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    &__slides {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    &__slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60%;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: all 0.6s ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        &--active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        &--prev {
+            transform: translateX(-100%);
+        }
+    }
+    
+    &__inner {
+        display: flex;
+        align-items: center;
+        gap: $spacing-xxl;
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+        
+        @include mobile {
+            flex-direction: column;
+            gap: $spacing-lg;
+            text-align: center;
+        }
+    }
+    
+    &__text {
+        flex: 1;
+        min-width: 300px;
+        
+        @include mobile {
+            min-width: auto;
+        }
+    }
+    
+    &__title {
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: 0.2em;
+        margin-bottom: $spacing-sm;
+        color: $text-light;
+    }
+    
+    &__subtitle {
+        font-family: $font-family-serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: $spacing-md;
+        color: $secondary-color;
+        
+        @include mobile {
+            font-size: 2rem;
+        }
+    }
+    
+    &__description {
+        font-size: 1.125rem;
+        line-height: 1.8;
+        color: $text-color;
+        margin-bottom: 0;
+        
+        @include mobile {
+            font-size: 1rem;
+        }
+    }
+    
+    &__image {
+        width: 60%;
+        max-width: 500px;
+        height: 300px;
+        position: relative;
+        
+        @include mobile {
+            width: 80%;
+            height: 200px;
+        }
+    }
+    
+    &__placeholder {
+        width: 100%;
+        height: 100%;
+        @include placeholder-pattern;
+    }
+    
+    // インジケーター
+    &__indicators {
+        position: absolute;
+        bottom: 12rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: $spacing-sm;
+        z-index: 10;
+        
+        @include mobile {
+            bottom: $spacing-lg;
+        }
+    }
+    
+    &__indicator {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.3);
+        border: none;
+        cursor: pointer;
+        transition: all $transition-base;
+        
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+            transform: scale(1.2);
+        }
+        
+        &--active {
+            background-color: $accent-color;
+            transform: scale(1.3);
+        }
+        
+        @include mobile {
+            width: 10px;
+            height: 10px;
+        }
+    }
+}
+
+// メニューヒーローセクション
+.menu-hero {
+    min-height: 100vh;
+    background-color: $bg-dark;
+    background-image: $background-pattern;
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: 0 0;
+    color: $secondary-color;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: $spacing-xxl 0;
+    
+    &__container {
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 $spacing-xl;
+        
+        @include mobile {
+            padding: 0 $spacing-sm;
+        }
+    }
+    
+    &__header {
+        text-align: center;
+        margin-bottom: $spacing-xxl;
+        
+        @include mobile {
+            margin-bottom: $spacing-xl;
+        }
+    }
+    
+    &__title {
+        font-family: $font-family-serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: $spacing-xs;
+        color: $secondary-color;
+        
+        @include mobile {
+            font-size: 2rem;
+        }
+    }
+    
+    &__subtitle {
+        font-size: 0.875rem;
+        font-weight: 500;
+        letter-spacing: 0.2em;
+        margin-bottom: 0;
+        color: $text-light;
+    }
+    
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-xs;
+        margin-bottom: $spacing-xxl;
+        
+        @include mobile {
+            gap: $spacing-xl;
+            margin-bottom: $spacing-xl;
+        }
+    }
+    
+    &__button {
+        text-align: center;
+    }
+}
+
+// メニューアイテム
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xl;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    @include mobile {
+        flex-direction: column;
+        gap: $spacing-lg;
+        text-align: center;
+    }
+    
+    &--reverse {
+        flex-direction: row-reverse;
+        
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+    
+    &__image {
+        flex: 2;
+        max-width: 800px;
+        height: 250px;
+        position: relative;
+        
+        @include mobile {
+            width: 100%;
+            height: 250px;
+        }
+    }
+    
+    &__placeholder {
+        width: 100%;
+        height: 100%;
+        @include placeholder-pattern;
+    }
+    
+    &__text {
+        flex: 1;
+        min-width: 320px;
+        
+        @include mobile {
+            min-width: auto;
+        }
+    }
+    
+    &__title {
+        font-family: $font-family-serif;
+        font-size: 1.75rem;
+        font-weight: 700;
+        margin-bottom: $spacing-md;
+        color: $secondary-color;
+        
+        @include mobile {
+            font-size: 1.5rem;
+        }
+    }
+    
+    &__description {
+        font-size: 1.125rem;
+        line-height: 1.8;
+        color: $text-color;
+        margin-bottom: 0;
+        
+        @include mobile {
+            font-size: 1rem;
+        }
+    }
+}
+
+// セクション共通スタイル
+.section {
+    @include section-base;
+    background-image: $background-pattern;
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: 0 0;
+
+    &--light {
+        background-color: $bg-light;
+        background-image: $background-pattern;
+    }
+
+    &--white {
+        background-color: $secondary-color;
+        color: $primary-color;
+        background-image: none; // 白背景ではパターンを無効化
+    }
+}
+
+// メニューセクション
+.menu {
+    &__grid {
+        @include grid-auto-fit(300px, $spacing-lg);
+        margin-bottom: $spacing-xl;
+    }
+
+    &__item {
+        @include card-base;
+
+        &--featured {
+            border: none;
+            position: static;
+        }
+
+        &__image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        &__placeholder {
+            width: 100%;
+            height: 100%;
+            background-color: $bg-light;
+            @include flex-center;
+            color: $text-light;
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+
+        &__content {
+            padding: $spacing-md;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: $secondary-color;
+        }
+
+        &__price {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: $accent-color;
+            margin-bottom: 0.5rem;
+        }
+
+        &__description {
+            color: $text-light;
+            line-height: 1.6;
+        }
+
+        &__tags {
+            display: flex;
+            gap: $spacing-xs;
+            margin-top: $spacing-sm;
+        }
+    }
+}
+
+// サイドメニュー
+.side-menu {
+    &__grid {
+        @include grid-auto-fit(300px, $spacing-xl);
+    }
+
+    &__category {
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: $spacing-md;
+            color: $secondary-color;
+            border-bottom: 1px solid currentColor;
+            padding-bottom: 0.5rem;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    &__item {
+        @include flex-between;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid $border-color;
+
+        &__name {
+            font-weight: 500;
+            color: $text-color;
+        }
+
+        &__price {
+            font-weight: 700;
+            color: $accent-color;
+        }
+    }
+}
+
+// トッピング
+.topping {
+    &__grid {
+        @include grid-auto-fit(200px, $spacing-sm);
+    }
+
+    &__item {
+        @include flex-between;
+        padding: $spacing-sm;
+        background-color: $bg-light;
+        border: 1px solid $border-color;
+        border-radius: $border-radius-lg;
+
+        &__name {
+            font-weight: 500;
+            color: $text-color;
+        }
+
+        &__price {
+            font-weight: 700;
+            color: $accent-color;
+        }
+    }
+}
+
+// ニュースセクション
+.news {
+    &__list {
+        margin-bottom: $spacing-xl;
+    }
+
+    &__item {
+        @include card-base;
+        padding: $spacing-lg 0;
+        margin-bottom: $spacing-lg;
+
+        &--featured {
+            border: none;
+            position: static;
+        }
+
+        &__date {
+            color: $text-light;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        &__title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: $secondary-color;
+        }
+
+        &__excerpt {
+            color: $text-light;
+            line-height: 1.6;
+        }
+
+        &__content {
+            margin: $spacing-sm 0;
+
+            p {
+                margin-bottom: $spacing-sm;
+                line-height: 1.6;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            ul {
+                margin: $spacing-sm 0;
+                padding-left: 1.5rem;
+
+                li {
+                    margin-bottom: 0.5rem;
+                    color: $text-light;
+                }
+            }
+
+            a {
+                color: $accent-color;
+                text-decoration: none;
+                font-weight: 500;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        &__tags {
+            display: flex;
+            gap: $spacing-xs;
+            margin-top: $spacing-sm;
+        }
+    }
+}
+
+// 店舗セクション
+.stores {
+    &__grid {
+        @include grid-auto-fit(300px, $spacing-lg);
+    }
+}
+
+.store {
+    &__card {
+        @include card-base;
+        padding: $spacing-lg;
+        transition: none;
+
+        &--featured {
+            border: none;
+            position: static;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: $spacing-sm;
+            color: $secondary-color;
+        }
+
+        &__image {
+            height: 200px;
+            overflow: hidden;
+            border-radius: 0;
+        }
+
+        &__placeholder {
+            width: 100%;
+            height: 100%;
+            background-color: $bg-light;
+            @include flex-center;
+            color: $text-light;
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+
+        &__name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: $spacing-sm;
+            color: $primary-color;
+        }
+
+        &__info {
+            > div {
+                margin-bottom: $spacing-sm;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            strong {
+                display: block;
+                font-weight: 700;
+                color: $secondary-color;
+                margin-bottom: 0.25rem;
+            }
+
+            p {
+                color: $text-light;
+                line-height: 1.6;
+            }
+        }
+
+        &__address,
+        &__hours,
+        &__phone,
+        &__access {
+            color: $text-light;
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        &__hours,
+        &__phone {
+            color: $text-color;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+// 店舗マップ
+.store-map {
+    margin: $spacing-xxl 0;
+
+    .map__placeholder {
+        height: 400px;
+        background-color: $secondary-color;
+        border: none;
+        @include flex-center;
+        flex-direction: column;
+        color: $primary-color;
+        text-align: center;
+
+        span {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 0.875rem;
+        }
+    }
+}
+
+// 営業時間テーブル
+.store-hours {
+    margin: $spacing-xxl 0;
+}
+
+.hours__table {
+    overflow-x: auto;
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: $bg-dark;
+        border-radius: $border-radius-lg;
+        overflow: hidden;
+        box-shadow: $shadow-md;
+    }
+
+    th,
+    td {
+        padding: $spacing-sm;
+        text-align: left;
+        border-bottom: 1px solid $border-color;
+    }
+
+    th {
+        background-color: $bg-light;
+        color: $secondary-color;
+        font-weight: 700;
+    }
+
+    td {
+        color: $text-color;
+    }
+
+    tr:last-child {
+        td {
+            border-bottom: none;
+        }
+    }
+}
+
+// ページネーション
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: $spacing-xs;
+    margin-top: $spacing-xl;
+    flex-wrap: wrap;
+}
+
+.pagination__link {
+    display: inline-block;
+    padding: 0.5rem $spacing-sm;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    text-decoration: none;
+    color: $text-color;
+    transition: all $transition-base;
+
+    &:hover {
+        background-color: $accent-color;
+        color: $primary-color;
+        border-color: $accent-color;
+    }
+
+    &--active {
+        background-color: $accent-color;
+        color: $primary-color;
+        border-color: $accent-color;
+    }
+
+    &--disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+
+        &:hover {
+            background-color: transparent;
+            color: $text-color;
+            border-color: $border-color;
+        }
+    }
+}
+
+// メニュー注意事項
+.menu-notice {
+    padding: $spacing-xl 0;
+    background-color: $bg-light;
+}
+
+.notice__box {
+    background-color: $bg-dark;
+    border: 1px solid $border-color;
+    border-radius: 0;
+    padding: $spacing-lg;
+    text-align: center;
+
+    p {
+        color: $text-light;
+        margin-bottom: 0.5rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// 採用情報
+.careers {
+    &__list {
+        @include grid-auto-fit(300px, $spacing-lg);
+    }
+
+    &__item {
+        background-color: $secondary-color;
+        color: $primary-color;
+        padding: $spacing-lg;
+        border-radius: $border-radius-lg;
+        box-shadow: $shadow-sm;
+
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: $spacing-sm;
+            color: $primary-color;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                padding: 0.25rem 0;
+                color: $text-light;
+                border-bottom: 1px solid #eee;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}

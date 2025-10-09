@@ -1,0 +1,52 @@
+{
+  "name": "daikakumei",
+  "version": "1.0.0",
+  "description": "大革命 - まぜ麺専門店のウェブサイト",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run watch:css\" \"npm run serve\"",
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "sass assets/css/style.scss assets/css/style.css --style=compressed --source-map",
+    "build:js": "echo 'JavaScript build process (if needed)'",
+    "build:github": "npm run build:css",
+    "watch:css": "sass --watch assets/css/style.scss:assets/css/style.css --style=expanded --source-map",
+    "watch:js": "echo 'JavaScript watch process (if needed)'",
+    "serve": "python3 -m http.server 8000",
+    "lint:css": "stylelint 'assets/css/**/*.scss'",
+    "lint:js": "eslint 'assets/js/**/*.js'",
+    "format": "prettier --write 'assets/**/*.{css,scss,js}'",
+    "clean": "rm -rf assets/css/style.css assets/css/style.css.map",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meercat-o6/daikakumei.git"
+  },
+  "keywords": [
+    "restaurant",
+    "ramen",
+    "maze-men",
+    "kobe",
+    "osaka",
+    "website"
+  ],
+  "author": "DAIKAKUMEI",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meercat-o6/daikakumei/issues"
+  },
+  "homepage": "https://meercat-o6.github.io/daikakumei/",
+  "devDependencies": {
+    "sass": "^1.93.2",
+    "concurrently": "^8.2.2",
+    "stylelint": "^16.0.0",
+    "stylelint-config-standard-scss": "^13.0.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
