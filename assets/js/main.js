@@ -44,22 +44,20 @@ class App {
             // リサイズイベントの最適化
             this.setupResizeHandler();
             
-            console.log('アプリケーションが正常に初期化されました');
+            // アプリケーションが正常に初期化されました
         } catch (error) {
             console.error('アプリケーションの初期化中にエラーが発生しました:', error);
         }
     }
 
     initializeCarousel() {
-        console.log('カルーセル初期化を開始...');
+        // カルーセル初期化を開始
         const carouselContainer = document.querySelector('.about__carousel');
-        console.log('カルーセルコンテナ:', carouselContainer);
         
         if (carouselContainer) {
             const slides = carouselContainer.querySelectorAll('.about__slide');
             const indicators = carouselContainer.querySelectorAll('.about__indicator');
-            console.log('スライド数:', slides.length);
-            console.log('インジケーター数:', indicators.length);
+            // スライドとインジケーターを確認
             
             this.carousel = new Carousel(carouselContainer);
             
@@ -68,10 +66,10 @@ class App {
                 this.carousel.handleVisibilityChange();
             });
             
-            // グローバルに保存（デバッグ用）
+            // グローバルに保存（開発時のデバッグ用）
             window.aboutCarousel = this.carousel;
             
-            console.log('カルーセルが初期化されました');
+            // カルーセルが初期化されました
         } else {
             console.warn('カルーセルコンテナが見つかりません');
         }
@@ -80,7 +78,7 @@ class App {
     setupResizeHandler() {
         const handleResize = Utils.debounce(() => {
             // リサイズ時の処理
-            console.log('ウィンドウがリサイズされました');
+            // ウィンドウがリサイズされました
             
             // 必要に応じて各モジュールのリサイズ処理を呼び出し
             if (this.navigation) {
@@ -375,25 +373,17 @@ class App {
             
             // 同じHTMLファイルへのリンクは除外（アンカーリンクも含む）
             if (targetFileName === currentFileName) {
-                console.log('同じHTMLファイルへのリンクのため、ローディングを表示しません:', {
-                    current: currentFileName,
-                    target: targetFileName,
-                    href: href
-                });
+                // 同じHTMLファイルへのリンクのため、ローディングを表示しません
                 return;
             }
             
             // お知らせページのページネーションリンクは除外
             if (href.includes('?page=') && currentFileName === 'news.html') {
-                console.log('お知らせページのページネーションのため、ローディングを表示しません:', href);
+                // お知らせページのページネーションのため、ローディングを表示しません
                 return;
             }
             
-            console.log('異なるHTMLファイルへのリンクのため、ローディングを表示します:', {
-                current: currentFileName,
-                target: targetFileName,
-                href: href
-            });
+            // 異なるHTMLファイルへのリンクのため、ローディングを表示します
             
             // ローディング画面を表示
             this.showLoadingScreen();
