@@ -821,7 +821,7 @@ body {
 }
 
 .section {
-  padding: 4rem 0 5rem 0;
+  padding: 4rem 0 12rem 0;
   background-color: #000000;
   background-image: url("../images/background-pattern.png");
   background-repeat: repeat;
@@ -829,7 +829,7 @@ body {
   background-position: 0 0;
 }
 .menu-section {
-  padding: 12rem 0 5rem 0;
+  padding: 12rem 0 12rem 0;
   background-color: #000000;
   background-image: url("../images/background-pattern.png");
   background-repeat: repeat;
@@ -841,7 +841,7 @@ body {
   background-image: url("../images/background-pattern.png");
 }
 .menu-section--light {
-  padding: 4rem 0 5rem 0;
+  padding: 4rem 0 12rem 0;
   background-color: #1a1a1a;
   background-image: url("../images/background-pattern.png");
 }
@@ -1531,7 +1531,7 @@ body {
 
 /* 採用情報セクション */
 .careers {
-  padding: 12rem 0 6rem 0;
+  padding: 12rem 0 12rem 0;
   background-color: #1a1a1a;
   background-image: url("../images/background-pattern.png");
   background-repeat: repeat;
@@ -1837,6 +1837,72 @@ body {
   margin-bottom: 0;
 }
 
+/* プライバシーポリシーページ */
+.privacy-section {
+  padding: 5rem 0 12rem 0;
+  background-color: #1a1a1a;
+  background-image: url("../images/background-pattern.png");
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: 0 0;
+}
+
+.privacy-content {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 3rem;
+}
+
+.privacy-item {
+  margin-bottom: 2.5rem;
+}
+
+.privacy-item:last-child {
+  margin-bottom: 0;
+}
+
+.privacy-title {
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #333;
+  border-bottom: 2px solid #ffd700;
+  padding-bottom: 0.5rem;
+}
+
+.privacy-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 0;
+}
+
+.privacy-text a {
+  color: #ff6b35;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.privacy-text a:hover {
+  text-decoration: underline;
+}
+
+.footer__link {
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer__link:hover {
+  color: #ffd700;
+}
+
 @media (max-width: 767px) {
   .careers {
     padding: 4rem 0;
@@ -1889,6 +1955,18 @@ body {
   
   .careers__phone-number {
     font-size: 1.1rem;
+  }
+  
+  .privacy-content {
+    padding: 2rem 1.5rem;
+  }
+  
+  .privacy-title {
+    font-size: 1.1rem;
+  }
+  
+  .privacy-text {
+    font-size: 0.9rem;
   }
 }
 
