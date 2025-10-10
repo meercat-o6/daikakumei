@@ -308,6 +308,9 @@ class App {
                     });
                 }
             }
+            
+            // イベントの伝播を停止してローディング制御を回避
+            e.stopPropagation();
         });
     }
 
@@ -328,7 +331,7 @@ class App {
                         loadingScreen.parentNode.removeChild(loadingScreen);
                     }
                 }, 500); // CSS transition時間と合わせる
-            }, 800); // 短めだが適度なゆとりを持たせる
+            }, 300); // より短い時間に変更
         });
 
         // ページ遷移時のローディング表示
@@ -380,6 +383,12 @@ class App {
                 return;
             }
             
+            // お知らせページのページネーションリンクは除外
+            if (href.includes('?page=') && currentFileName === 'news.html') {
+                console.log('お知らせページのページネーションのため、ローディングを表示しません:', href);
+                return;
+            }
+            
             console.log('異なるHTMLファイルへのリンクのため、ローディングを表示します:', {
                 current: currentFileName,
                 target: targetFileName,
@@ -388,6 +397,9 @@ class App {
             
             // ローディング画面を表示
             this.showLoadingScreen();
+            
+            // 実際のページ遷移を許可（デフォルトの動作を継続）
+            // preventDefault()は呼ばない
         });
     }
 
