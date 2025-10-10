@@ -38,23 +38,20 @@
 
     <!-- メインコンテンツ -->
     <main>
-        <!-- ページヘッダー -->
-        <section class="page-header">
-            <div class="container">
-                <h1 class="page-header__title">メニュー</h1>
-                <p class="page-header__subtitle">こだわりのまぜ麺とサイドメニュー</p>
-            </div>
-        </section>
 
         <!-- メインメニュー -->
         <section class="menu-section">
             <div class="container">
-                <h2 class="section__title">メインメニュー</h2>
+                <h2 class="section__title">
+                    <span class="ramen-left"></span>
+                    メインメニュー
+                    <span class="ramen-right"></span>
+                </h2>
                 <div class="menu__grid">
                     <div class="menu__item menu__item--featured">
                         <div class="menu__image">
                             <div class="menu__placeholder">
-                                <span>釜玉</span>
+                                <span>写真を配置予定</span>
                             </div>
                         </div>
                         <div class="menu__content">
@@ -70,7 +67,7 @@
                     <div class="menu__item menu__item--featured">
                         <div class="menu__image">
                             <div class="menu__placeholder">
-                                <span>肉みそ</span>
+                                <span>写真を配置予定</span>
                             </div>
                         </div>
                         <div class="menu__content">
@@ -84,29 +81,37 @@
                         </div>
                     </div>
                 </div>
+                
+                <!-- 盛り増しオプション -->
+                <div class="side-menu__items" style="margin-top: 3rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                    <div class="side-menu__item">
+                        <span class="side-menu__name">大盛り</span>
+                        <span class="side-menu__price">100円</span>
+                    </div>
+                    <div class="side-menu__item">
+                        <span class="side-menu__name">ダブル盛り</span>
+                        <span class="side-menu__price">200円</span>
+                    </div>
+                    <div class="side-menu__item">
+                        <span class="side-menu__name">トリプル盛り</span>
+                        <span class="side-menu__price">300円</span>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- サイドメニュー -->
         <section class="menu-section menu-section--light">
             <div class="container">
-                <h2 class="section__title">サイドメニュー</h2>
+                <h2 class="section__title">
+                    <span class="ramen-left"></span>
+                    サイドメニュー
+                    <span class="ramen-right"></span>
+                </h2>
                 <div class="side-menu__grid">
                     <div class="side-menu__category">
                         <h3>ご飯もの</h3>
                         <div class="side-menu__items">
-                            <div class="side-menu__item">
-                                <span class="side-menu__name">大盛り</span>
-                                <span class="side-menu__price">100円</span>
-                            </div>
-                            <div class="side-menu__item">
-                                <span class="side-menu__name">ダブル盛り</span>
-                                <span class="side-menu__price">200円</span>
-                            </div>
-                            <div class="side-menu__item">
-                                <span class="side-menu__name">トリプル盛り</span>
-                                <span class="side-menu__price">300円</span>
-                            </div>
                             <div class="side-menu__item">
                                 <span class="side-menu__name">チョイ飯</span>
                                 <span class="side-menu__price">50円</span>
@@ -141,7 +146,11 @@
                                 <span class="side-menu__price">300円</span>
                             </div>
                             <div class="side-menu__item">
-                                <span class="side-menu__name">コーラorオレンジ</span>
+                                <span class="side-menu__name">コーラ</span>
+                                <span class="side-menu__price">250円</span>
+                            </div>
+                            <div class="side-menu__item">
+                                <span class="side-menu__name">オレンジ</span>
                                 <span class="side-menu__price">250円</span>
                             </div>
                             <div class="side-menu__item">
@@ -155,9 +164,13 @@
         </section>
 
         <!-- トッピング -->
-        <section class="menu-section">
+        <section class="menu-section menu-section--light">
             <div class="container">
-                <h2 class="section__title">トッピング</h2>
+                <h2 class="section__title">
+                    <span class="ramen-left"></span>
+                    トッピング
+                    <span class="ramen-right"></span>
+                </h2>
                 <div class="topping__grid">
                     <div class="topping__item">
                         <span class="topping__name">温玉</span>
@@ -180,19 +193,10 @@
                         <span class="topping__price">200円</span>
                     </div>
                 </div>
+                <p class="price-note">※表示価格は税込です</p>
             </div>
         </section>
 
-        <!-- 注意事項 -->
-        <section class="menu-notice">
-            <div class="container">
-                <div class="notice__box">
-                    <p>※表示価格は税込です</p>
-                    <p>※メニューは店舗により異なる場合がございます</p>
-                    <p>※食材の仕入れ状況により、一部メニューがご提供できない場合がございます</p>
-                </div>
-            </div>
-        </section>
     </main>
 
     <!-- TOPに戻るボタン - ラーメンデザイン版 -->
