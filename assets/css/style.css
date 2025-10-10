@@ -399,7 +399,7 @@ body {
   background-size: auto;
   background-position: 0 0;
   color: #ffffff;
-  padding: 6rem 0 3rem;
+  padding: 12rem 0 3rem;
   text-align: center;
 }
 .page-header__title {
@@ -1531,7 +1531,7 @@ body {
 
 /* 採用情報セクション */
 .careers {
-  padding: 6rem 0;
+  padding: 12rem 0 6rem 0;
   background-color: #1a1a1a;
   background-image: url("../images/background-pattern.png");
   background-repeat: repeat;
@@ -1750,6 +1750,93 @@ body {
   transform: translateX(4px);
 }
 
+/* 採用情報 - 電話問い合わせセクション */
+.careers__contact {
+  margin-top: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.careers__contact-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.careers__contact-title {
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.careers__contact-subtitle {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 0;
+}
+
+.careers__contact-content {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.careers__phone-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.careers__phone-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: #f8f8f8;
+  border-radius: 6px;
+}
+
+.careers__phone-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #333;
+  min-width: 80px;
+}
+
+.careers__phone-number {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ff6b35;
+  font-family: monospace;
+}
+
+.careers__phone-time {
+  font-size: 0.85rem;
+  color: #666;
+  text-align: right;
+  flex: 1;
+}
+
+.careers__contact-note {
+  text-align: center;
+}
+
+.careers__contact-note p {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 0.25rem;
+  line-height: 1.4;
+}
+
+.careers__contact-note p:last-child {
+  margin-bottom: 0;
+}
+
 @media (max-width: 767px) {
   .careers {
     padding: 4rem 0;
@@ -1779,6 +1866,29 @@ body {
   
   .career-card__detail-value {
     text-align: left;
+  }
+  
+  .careers__contact {
+    margin-top: 2rem;
+  }
+  
+  .careers__contact-title {
+    font-size: 1.25rem;
+  }
+  
+  .careers__contact-content {
+    padding: 1.5rem;
+  }
+  
+  .careers__phone-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+    padding: 0.75rem;
+  }
+  
+  .careers__phone-number {
+    font-size: 1.1rem;
   }
 }
 
