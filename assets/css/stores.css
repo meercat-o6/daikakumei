@@ -1,0 +1,4 @@
+/* 店舗情報ページ専用スタイル */
+.stores-section .store__card__title {
+    margin-top: 1.5rem;
+}
