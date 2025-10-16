@@ -1,7 +1,7 @@
 {
   "name": "daikakumei",
   "version": "1.0.0",
-  "description": "大革命 - まぜ麺専門店のウェブサイト",
+  "description": "大革命 - あえ麺専門店のウェブサイト",
   "main": "index.js",
   "scripts": {
     "dev": "concurrently \"npm run watch:css\" \"npm run serve\"",

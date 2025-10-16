@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>メニュー - DAIKAKUMEI 大革命</title>
-    <meta name="description" content="大革命の全メニューをご紹介。釜玉、肉みそをはじめとするこだわりのまぜ麺メニューとサイドメニューをご覧ください。">
+    <meta name="description" content="大革命の全メニューをご紹介。釜玉、肉みそをはじめとするこだわりのあえ麺メニューとサイドメニューをご覧ください。">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +25,6 @@
                     <li role="none"><a href="menu.html" class="nav__link nav__link--active" role="menuitem">おしながき</a></li>
                     <li role="none"><a href="stores.html" class="nav__link" role="menuitem">店舗情報</a></li>
                     <li role="none"><a href="careers.html" class="nav__link" role="menuitem">採用情報</a></li>
-                    <li role="none"><a href="contact.html" class="nav__link" role="menuitem">お問い合わせ</a></li>
                 </ul>
                 <button class="nav__toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav-menu">
                     <span></span>
@@ -50,14 +49,12 @@
                 <div class="menu__grid">
                     <div class="menu__item menu__item--featured">
                         <div class="menu__image">
-                            <div class="menu__placeholder">
-                                <span>写真を配置予定</span>
-                            </div>
+                            <img src="assets/images/menu/kamatama-oshinagaki.png" alt="釜玉" class="menu__img" style="width: 100%; height: 300px; object-fit: contain; border-radius: 8px;">
                         </div>
                         <div class="menu__content">
                             <h3>釜玉</h3>
                             <p class="menu__price">800円</p>
-                            <p class="menu__description">黒ごまと卵黄のコクが絶品のまぜ麺。千切りキャベツとチャーシューがアクセント。</p>
+                            <p class="menu__description">黒ごまと卵黄のコクが絶品のあえ麺。千切りキャベツとチャーシューがアクセント。</p>
                             <div class="menu__tags">
                                 <span class="menu__tag">人気</span>
                                 <span class="menu__tag">おすすめ</span>
@@ -65,10 +62,8 @@
                         </div>
                     </div>
                     <div class="menu__item menu__item--featured">
-                        <div class="menu__image">
-                            <div class="menu__placeholder">
-                                <span>写真を配置予定</span>
-                            </div>
+                        <div class="menu__image" style="perspective: 1000px;">
+                            <img src="assets/images/menu/nikumiso.png" alt="肉味噌" class="menu__img" style="width: 100%; height: 300px; object-fit: contain; border-radius: 8px; transform: rotateX(15deg);">
                         </div>
                         <div class="menu__content">
                             <h3>肉みそ</h3>
@@ -82,8 +77,26 @@
                     </div>
                 </div>
                 
+                <!-- ちょい飯 -->
+                <div class="menu__item" style="margin-top: 3rem; display: flex; align-items: center; gap: 2rem;">
+                    <div class="menu__image" style="flex: 0 0 600px;">
+                        <div class="menu__placeholder" style="width: 600px; height: 400px; background: #f5f5f5; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #999;">
+                            <span>写真を配置予定</span>
+                        </div>
+                    </div>
+                    <div class="menu__content" style="flex: 1;">
+                        <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem; color: #fff;">ちょい飯</h3>
+                        <p style="color: #fff; margin-bottom: 1rem; line-height: 1.6;">
+                            メインのあえ麺を食べた後、<br>
+                            丼に入れてお楽しみいただくご飯です。<br>
+                            〆にどうぞ！
+                        </p>
+                        <p class="menu__price" style="font-size: 1.2rem; font-weight: bold; color: #ffd700;">50円</p>
+                    </div>
+                </div>
+                
                 <!-- 盛り増しオプション -->
-                <div class="side-menu__items" style="margin-top: 3rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                <div class="side-menu__items" style="margin-top: 8rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
                     <div class="side-menu__item">
                         <span class="side-menu__name">大盛り</span>
                         <span class="side-menu__price">100円</span>
@@ -111,53 +124,68 @@
                 <div class="side-menu__grid">
                     <div class="side-menu__category">
                         <h3>ご飯もの</h3>
-                        <div class="side-menu__items">
-                            <div class="side-menu__item">
-                                <span class="side-menu__name">チョイ飯</span>
-                                <span class="side-menu__price">50円</span>
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; width: 100%;">
+                            <div class="topping__item">
+                                <span class="topping__name">チャーマヨ丼</span>
+                                <span class="topping__price">350円</span>
                             </div>
-                            <div class="side-menu__item">
-                                <span class="side-menu__name">チャーマヨ丼</span>
-                                <span class="side-menu__price">350円</span>
+                            <div class="topping__item">
+                                <span class="topping__name">白ご飯</span>
+                                <span class="topping__price">150円</span>
                             </div>
-                            <div class="side-menu__item">
-                                <span class="side-menu__name">白ご飯</span>
-                                <span class="side-menu__price">150円</span>
-                            </div>
-                            <div class="side-menu__item">
-                                <span class="side-menu__name">TKG</span>
-                                <span class="side-menu__price">200円</span>
+                            <div class="topping__item">
+                                <span class="topping__name">TKG</span>
+                                <span class="topping__price">200円</span>
                             </div>
                         </div>
                     </div>
                     <div class="side-menu__category">
-                        <h3>おかず・ドリンク</h3>
-                        <div class="side-menu__items">
-                            <div class="side-menu__item">
-                                <span class="side-menu__name">お得セット</span>
-                                <span class="side-menu__price">350円</span>
+                        <h3>おかず</h3>
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; width: 100%;">
+                            <div class="topping__item">
+                                <span class="topping__name">お得セット</span>
+                                <span class="topping__price">350円</span>
                             </div>
-                            <div class="side-menu__item">
-                                <span class="side-menu__name">唐揚げ</span>
-                                <span class="side-menu__price">250円</span>
+                            <div class="topping__item">
+                                <span class="topping__name">唐揚げ</span>
+                                <span class="topping__price">250円</span>
                             </div>
-                            <div class="side-menu__item">
-                                <span class="side-menu__name">ヤンニョム風唐揚げ</span>
-                                <span class="side-menu__price">300円</span>
+                            <div class="topping__item">
+                                <span class="topping__name">ヤンニョム風唐揚げ</span>
+                                <span class="topping__price">300円</span>
                             </div>
-                            <div class="side-menu__item">
-                                <span class="side-menu__name">コーラ</span>
-                                <span class="side-menu__price">250円</span>
-                            </div>
-                            <div class="side-menu__item">
-                                <span class="side-menu__name">オレンジ</span>
-                                <span class="side-menu__price">250円</span>
-                            </div>
-                            <div class="side-menu__item">
-                                <span class="side-menu__name">ビール</span>
-                                <span class="side-menu__price">600円</span>
+                            <div class="topping__item">
+                                <span class="topping__name">ポテから</span>
+                                <span class="topping__price">300円</span>
+                                <span class="topping__note">（関西学院大学前店）</span>
                             </div>
                         </div>
+                    </div>
+                </div>
+                
+                <!-- ドリンク -->
+                <div class="side-menu__category" style="margin-top: 3rem;">
+                    <h3>ドリンク</h3>
+                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; width: 100%;">
+                        <div class="topping__item">
+                            <span class="topping__name">コーラ・オレンジ</span>
+                            <span class="topping__price">250円</span>
+                        </div>
+                        <div class="topping__item">
+                            <span class="topping__name">チューハイ</span>
+                            <span class="topping__price">400円</span>
+                        </div>
+                        <div class="topping__item">
+                            <span class="topping__name">ハイボール</span>
+                            <span class="topping__price">450円</span>
+                        </div>
+                        <div class="topping__item">
+                            <span class="topping__name">ビール</span>
+                            <span class="topping__price">600円</span>
+                        </div>
+                    </div>
+                    <div class="menu__note" style="margin-top: 1rem; text-align: center; color: #666; font-size: 0.9rem;">
+                        <p>※チューハイ・ハイボールは尼崎・総本店・金閣寺店限定です</p>
                     </div>
                 </div>
             </div>
