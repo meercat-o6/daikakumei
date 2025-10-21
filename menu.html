@@ -39,7 +39,7 @@
     <main>
 
         <!-- メインメニュー -->
-        <section class="menu-section">
+        <section class="menu-section" style="background-image: url('assets/images/background-pattern.png'); background-repeat: repeat; background-size: cover; background-position: center; background-attachment: fixed;">
             <div class="container">
                 <h2 class="section__title">
                     <span class="ramen-left"></span>
@@ -54,7 +54,7 @@
                         <div class="menu__content">
                             <h3>釜玉</h3>
                             <p class="menu__price">800円</p>
-                            <p class="menu__description">黒ごまと卵黄のコクが絶品のあえ麺。千切りキャベツとチャーシューがアクセント。</p>
+                            <p class="menu__description">ねぎの香りとブラックペッパーのパンチが効いた絶品釜玉。<br>タレと卵とネギをよく絡めてお召し上がりください。</p>
                             <div class="menu__tags">
                                 <span class="menu__tag">人気</span>
                                 <span class="menu__tag">おすすめ</span>
@@ -68,7 +68,7 @@
                         <div class="menu__content">
                             <h3>肉みそ</h3>
                             <p class="menu__price">950円</p>
-                            <p class="menu__description">ひき肉の肉味噌とネギの香りが食欲をそそる。海苔の風味も絶妙。</p>
+                            <p class="menu__description">ピリ辛な肉味噌がたっぷりと絡んだ逸品。<br>ニラとメンマの食感がアクセントとなって食欲をそそります。</p>
                             <div class="menu__tags">
                                 <span class="menu__tag">新メニュー</span>
                                 <span class="menu__tag">辛口</span>
@@ -77,26 +77,8 @@
                     </div>
                 </div>
                 
-                <!-- ちょい飯 -->
-                <div class="menu__item" style="margin-top: 3rem; display: flex; align-items: center; gap: 2rem;">
-                    <div class="menu__image" style="flex: 0 0 600px;">
-                        <div class="menu__placeholder" style="width: 600px; height: 400px; background: #f5f5f5; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #999;">
-                            <span>写真を配置予定</span>
-                        </div>
-                    </div>
-                    <div class="menu__content" style="flex: 1;">
-                        <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem; color: #fff;">ちょい飯</h3>
-                        <p style="color: #fff; margin-bottom: 1rem; line-height: 1.6;">
-                            メインのあえ麺を食べた後、<br>
-                            丼に入れてお楽しみいただくご飯です。<br>
-                            〆にどうぞ！
-                        </p>
-                        <p class="menu__price" style="font-size: 1.2rem; font-weight: bold; color: #ffd700;">50円</p>
-                    </div>
-                </div>
-                
                 <!-- 盛り増しオプション -->
-                <div class="side-menu__items" style="margin-top: 8rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                <div class="side-menu__items" style="margin-top: 4rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
                     <div class="side-menu__item">
                         <span class="side-menu__name">大盛り</span>
                         <span class="side-menu__price">100円</span>
@@ -114,7 +96,7 @@
         </section>
 
         <!-- サイドメニュー -->
-        <section class="menu-section menu-section--light">
+        <section class="menu-section menu-section--light" style="background-image: url('assets/images/background-pattern.png'); background-repeat: repeat; background-size: cover; background-position: center; background-attachment: fixed;">
             <div class="container">
                 <h2 class="section__title">
                     <span class="ramen-left"></span>
@@ -124,6 +106,38 @@
                 <div class="side-menu__grid">
                     <div class="side-menu__category">
                         <h3>ご飯もの</h3>
+                        
+                        <!-- ちょい飯カード -->
+                        <div style="margin-bottom: 2rem; background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%); border: 1px solid #333333; border-radius: 12px; padding: 1.5rem; display: flex; align-items: center; gap: 1.5rem;">
+                            <div style="flex: 0 0 200px; position: relative;">
+                                <video 
+                                    src="assets/video/choimeshi.mp4" 
+                                    autoplay 
+                                    loop 
+                                    muted 
+                                    playsinline
+                                    style="width: 200px; height: 200px; object-fit: cover; border-radius: 8px;"
+                                    aria-label="ちょい飯の動画">
+                                </video>
+                                <div style="position: absolute; top: 8px; right: 8px; background: #ffd700; color: #000; padding: 0.4rem 0.8rem; font-weight: bold; font-size: 0.8rem; border-radius: 15px;">
+                                    新登場！
+                                </div>
+                            </div>
+                            <div style="flex: 1;">
+                                <h4 style="font-size: 1.5rem; font-weight: 700; color: #fff; font-family: 'Noto Serif JP', serif; margin-bottom: 0.5rem;">ちょい飯</h4>
+                                <p style="font-size: 1.3rem; font-weight: 700; color: #ffd700; margin-bottom: 1rem;">50円</p>
+                                <p style="color: #ccc; line-height: 1.6; margin-bottom: 1rem; font-size: 0.95rem;">
+                                    メインのあえ麺を食べた後、<br>
+                                    丼に入れてお楽しみいただくご飯です。<br>
+                                    <span style="color: #ffd700; font-weight: 600;">〆にどうぞ！</span>
+                                </p>
+                                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                    <span style="background-color: transparent; color: #ffd700; padding: 0.3rem 0.8rem; border: 1px solid #ffd700; border-radius: 15px; font-size: 0.75rem; font-weight: 600;">お得</span>
+                                    <span style="background-color: transparent; color: #ffd700; padding: 0.3rem 0.8rem; border: 1px solid #ffd700; border-radius: 15px; font-size: 0.75rem; font-weight: 600;">〆に最適</span>
+                                </div>
+                            </div>
+                        </div>
+                        
                         <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; width: 100%;">
                             <div class="topping__item">
                                 <span class="topping__name">チャーマヨ丼</span>
@@ -141,6 +155,31 @@
                     </div>
                     <div class="side-menu__category">
                         <h3>おかず</h3>
+                        
+                        <!-- ポテカラカード -->
+                        <div style="margin-bottom: 2rem; background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%); border: 1px solid #333333; border-radius: 12px; padding: 1.5rem; display: flex; align-items: center; gap: 1.5rem;">
+                            <div style="flex: 0 0 200px;">
+                                <img 
+                                    src="assets/images/menu/potekara.jpg" 
+                                    alt="ポテカラ"
+                                    style="width: 200px; height: 200px; object-fit: cover; border-radius: 8px;"
+                                />
+                            </div>
+                            <div style="flex: 1;">
+                                <h4 style="font-size: 1.5rem; font-weight: 700; color: #fff; font-family: 'Noto Serif JP', serif; margin-bottom: 0.5rem;">ポテカラ</h4>
+                                <p style="font-size: 1.3rem; font-weight: 700; color: #ffd700; margin-bottom: 1rem;">300円</p>
+                                <p style="color: #ccc; line-height: 1.6; margin-bottom: 1rem; font-size: 0.95rem;">
+                                    関西学院大学前店限定の<br>
+                                    ポテトと唐揚げの組み合わせ。<br>
+                                    <span style="color: #ffd700; font-weight: 600;">人気のサイドメニュー！</span>
+                                </p>
+                                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                    <span style="background-color: transparent; color: #ffd700; padding: 0.3rem 0.8rem; border: 1px solid #ffd700; border-radius: 15px; font-size: 0.75rem; font-weight: 600;">限定</span>
+                                    <span style="background-color: transparent; color: #ffd700; padding: 0.3rem 0.8rem; border: 1px solid #ffd700; border-radius: 15px; font-size: 0.75rem; font-weight: 600;">人気</span>
+                                </div>
+                            </div>
+                        </div>
+                        
                         <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; width: 100%;">
                             <div class="topping__item">
                                 <span class="topping__name">お得セット</span>
@@ -153,11 +192,6 @@
                             <div class="topping__item">
                                 <span class="topping__name">ヤンニョム風唐揚げ</span>
                                 <span class="topping__price">300円</span>
-                            </div>
-                            <div class="topping__item">
-                                <span class="topping__name">ポテから</span>
-                                <span class="topping__price">300円</span>
-                                <span class="topping__note">（関西学院大学前店）</span>
                             </div>
                         </div>
                     </div>
@@ -192,7 +226,7 @@
         </section>
 
         <!-- トッピング -->
-        <section class="menu-section menu-section--light">
+        <section class="menu-section menu-section--light" style="background-image: url('assets/images/background-pattern.png'); background-repeat: repeat; background-size: cover; background-position: center; background-attachment: fixed;">
             <div class="container">
                 <h2 class="section__title">
                     <span class="ramen-left"></span>
