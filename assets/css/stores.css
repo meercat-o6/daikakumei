@@ -4,6 +4,10 @@
     padding: 4rem 0;
 }
 
+.page-header {
+    padding: 8rem 0 3rem;
+}
+
 .stores-section .store__card__title {
     margin-top: 1.5rem;
 }
