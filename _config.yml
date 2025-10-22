@@ -4,12 +4,7 @@ description: "神戸・大阪を中心に展開するあえ麺専門店「大革
 url: "https://daikakumei.com"
 baseurl: ""
 
-# プラグイン設定
-plugins:
-  - jekyll-redirect-from
-
 # パーマリンク設定（.htmlを削除）
-permalink: /:title/
 permalink: pretty
 
 # 除外ファイル
