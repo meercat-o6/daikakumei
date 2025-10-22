@@ -23,11 +23,15 @@ daikakumei/
 │   │   └── _pages.scss     # ページ固有スタイル
 │   ├── js/                 # JavaScript
 │   │   ├── main.js         # メインJSファイル
-│   │   └── modules/        # 機能別モジュール
-│   │       ├── navigation.js
-│   │       ├── hero.js
-│   │       ├── form.js
-│   │       └── utils.js
+│   │   ├── modules/        # 機能別モジュール
+│   │   │   ├── navigation.js
+│   │   │   ├── hero.js
+│   │   │   ├── form.js
+│   │   │   ├── utils.js
+│   │   │   ├── news.js
+│   │   │   └── news-detail.js
+│   │   └── data/           # データファイル
+│   │       └── news-data.js
 │   └── images/             # 画像ファイル
 │       ├── hero/           # ヒーロー画像
 │       ├── menu/           # メニュー画像
