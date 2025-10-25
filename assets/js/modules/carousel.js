@@ -14,7 +14,7 @@ class Carousel {
         console.log('Found indicators:', this.indicators.length);
         
         this.currentSlide = 0;
-        this.totalSlides = this.slides.length;
+        this.totalSlides = 2; // スライド数を2に制限
         this.autoPlayInterval = null;
         this.autoPlayDelay = 3000; // 3秒間隔
         

@@ -587,6 +587,11 @@ main {
 .about__slide--prev {
   transform: translateX(-100%);
 }
+
+/* スライド3を非表示 */
+.about__slide:nth-child(3) {
+  display: none !important;
+}
 .about__inner {
   display: flex;
   align-items: center;
@@ -614,7 +619,7 @@ main {
   .about__slides {
     height: auto !important;
     position: relative !important;
-    min-height: 400px !important;
+    min-height: 500px !important;
   }
   .about__slide {
     height: auto !important;
@@ -712,7 +717,7 @@ main {
 }
 @media (max-width: 767px) {
   .about__indicators {
-    bottom: -3rem;
+    bottom: -1rem;
   }
 }
 .about__indicator {
