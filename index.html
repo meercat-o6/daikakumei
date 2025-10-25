@@ -94,7 +94,7 @@
                 <!-- テキストブロックは撤去。ロゴ中心に構成 -->
                 <!-- フルブリード背景 + 中央ロゴ（画像が来たら差し替え） -->
                 <img src="assets/images/hero/kamatama.jpg" alt="大革命の釜玉うどん" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;">
-                <div class="hero__logo" style="position: relative; z-index: 2;"><span>大革命</span></div>
+                <div class="hero__logo"><span>大革命</span></div>
             </section>
 
             <!-- 大革命についてセクション -->
@@ -110,36 +110,36 @@
                             <div class="about__slide about__slide--active">
                                 <div class="about__inner">
                                     <div class="about__text">
-                                        <h3 class="about__slide-title">あえ麺で新時代を切り開く</h3>
+                                        <h3 class="about__slide-title" style="font-size: 1.8rem; margin-bottom: 1rem;">あえ麺で新時代を切り開く</h3>
                                         <p class="about__description">
                                             大革命は、神戸・大阪を中心に展開するあえ麺専門店です。<br>
-                                            伝統的なラーメンの概念を覆し、<br>
+                                            スープを使わず、タレや味噌で麺を和える<br>
                                             独自のあえ麺で新しい麺文化を創造しています。<br>
-                                            こだわりのスープと麺、そして豊富なトッピングで、<br>
+                                            こだわりの麺とタレ、そして豊富なトッピングで、<br>
                                             お客様に新しい味覚体験をお届けします。
                                         </p>
                                     </div>
                                     <div class="about__image">
-                                        <div class="about__placeholder" role="img" aria-label="店舗外観のプレースホルダー">店舗外観</div>
+                                        <div class="about__placeholder" role="img" aria-label="店舗外観のプレースホルダー">Coming soon...</div>
                                     </div>
                                 </div>
                             </div>
                             
-                            <!-- スライド2: こだわりのスープ -->
+                            <!-- スライド2: こだわりの肉味噌 -->
                             <div class="about__slide">
                                 <div class="about__inner">
                                     <div class="about__text">
-                                        <h3 class="about__slide-title">こだわりのスープ</h3>
+                                        <h3 class="about__slide-title" style="font-size: 1.8rem; margin-bottom: 1rem;">こだわりの肉味噌</h3>
                                         <p class="about__description">
-                                            長年の経験と技術を積み重ねた職人が、<br>
-                                            一つひとつ丁寧に仕上げるこだわりのスープ。<br>
-                                            鶏ガラと豚骨をベースに、<br>
-                                            独自の調合で生まれる深い味わいをお楽しみください。<br>
-                                            あえ麺の美味しさを支える重要な要素です。
+                                            厳選されたひき肉と特製の味噌を<br>
+                                            じっくりと炒め上げた自慢の肉味噌。<br>
+                                            ピリ辛でコクのある味わいが<br>
+                                            麺と絶妙に絡み合い、<br>
+                                            一口食べれば忘れられない美味しさをお届けします。
                                         </p>
                                     </div>
-                                    <div class="about__image">
-                                        <div class="about__placeholder" role="img" aria-label="スープのプレースホルダー">こだわりスープ</div>
+                                    <div class="about__image" style="flex: 0 0 70%; max-width: 550px;">
+                                        <img src="assets/images/hero/nikumiso.jpg" alt="肉味噌" style="width: 100%; height: 100%; object-fit: cover; border-radius: 0; box-shadow: 0 12px 48px rgba(0, 0, 0, 0.6), 0 4px 16px rgba(0, 0, 0, 0.4); transform: scale(1.05);">
                                     </div>
                                 </div>
                             </div>
@@ -158,7 +158,7 @@
                                         </p>
                                     </div>
                                     <div class="about__image">
-                                        <div class="about__placeholder" role="img" aria-label="トッピングのプレースホルダー">豊富なトッピング</div>
+                                        <div class="about__placeholder" role="img" aria-label="トッピングのプレースホルダー">Coming soon...</div>
                                     </div>
                                 </div>
                             </div>
@@ -194,8 +194,9 @@
                                     <h3 class="news-item__title">大革命マークを集めてお得をゲット</h3>
                                     <p class="news-item__excerpt">
                                         大革命マークを集めて素敵なプレゼントをゲットしよう！<br>
-                                        3枚で100円のトッピング1つ無料、5枚で唐揚げ無料、10枚で釜玉無料、15枚で肉味噌無料と、<br>
-                                        集めるほどお得な特典をご用意しております。
+                                        3枚で100円のトッピング1つ無料、5枚で唐揚げ無料、10枚で釜玉無料、13枚で肉味噌無料と、<br>
+                                        集めるほどお得な特典をご用意しております。<br>
+                                        <span style="color: #999; font-weight: 600;">※関西学院大学前店限定</span>
                                     </p>
                                 </div>
                                 <div class="news-item__category">
@@ -204,16 +205,18 @@
                             </article>
 
                             <!-- お知らせ2 -->
-                            <article class="news-item" onclick="window.location.href='news-detail.html?id=3'" style="cursor: pointer;">
+                            <article class="news-item" onclick="window.location.href='news-detail.html?id=2'" style="cursor: pointer;">
                                 <div class="news-item__date">
                                     <span class="news-item__date-day"></span>
-                                    <span class="news-item__date-month">10月</span>
+                                    <span class="news-item__date-month">11月</span>
                                 </div>
                                 <div class="news-item__content">
-                                    <h3 class="news-item__title">TKG1杯無料キャンペーン実施中</h3>
+                                    <h3 class="news-item__title">麺増量キャンペーン実施中</h3>
                                     <p class="news-item__excerpt">
-                                        卵かけご飯のTKGを1杯無料でお召し上がりいただけます。<br>
-                                        期間限定の特別キャンペーンですので、この機会をお見逃しなく！
+                                        並盛りのご注文で大盛り、W盛りに変更可能！<br>
+                                        食券をお渡しの際に店員にお声がけください♪<br>
+                                        より多くの麺でお腹いっぱいお楽しみください。<br>
+                                        <span style="color: #999; font-weight: 600;">※尼崎店、六甲道店、神戸総本店、金閣寺店、三宮店、岸和田店限定</span>
                                     </p>
                                 </div>
                                 <div class="news-item__category">
@@ -258,7 +261,7 @@
                         <h3 class="menu-hero__subtitle">MENU</h3>
                     </div>
                     
-                    <div class="menu-hero__content" style="display: flex !important; flex-direction: row !important; gap: 2rem; align-items: stretch;">
+                    <div class="menu-hero__content">
                         <!-- メニューアイテム1 -->
                         <div class="menu-item" style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
                             <div class="menu-item__image" style="width: 100%; max-width: 500px; height: 400px; overflow: hidden;">
@@ -276,7 +279,7 @@
                         <!-- メニューアイテム2 -->
                         <div class="menu-item" style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
                             <div class="menu-item__image" style="width: 100%; max-width: 500px; height: 400px; overflow: hidden; perspective: 1000px;">
-                                <img src="assets/images/menu/nikumiso.png" alt="肉味噌" class="menu-item__img" style="width: 100%; height: 100%; object-fit: contain; border-radius: 12px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); transform: rotateX(15deg);">
+                                <img src="assets/images/menu/nikumiso_aemen.png" alt="肉味噌" class="menu-item__img" style="width: 100%; height: 100%; object-fit: contain; border-radius: 12px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); transform: rotateX(15deg);">
                             </div>
                             <div class="menu-item__text" style="text-align: center;">
                                 <h4 class="menu-item__title">肉味噌</h4>
@@ -308,7 +311,7 @@
                         <!-- 店舗1: 神戸本店 -->
                         <div class="store-card">
                             <div class="store-card__image">
-                                <div class="store-card__placeholder" role="img" aria-label="神戸本店の外観">店舗外観</div>
+                                <div class="store-card__placeholder" role="img" aria-label="神戸本店の外観">Coming soon...</div>
                             </div>
                             <div class="store-card__content">
                                 <h3 class="store-card__name">神戸本店</h3>
@@ -331,7 +334,7 @@
                         <!-- 店舗3: 関西学院前店 -->
                         <div class="store-card">
                             <div class="store-card__image">
-                                <div class="store-card__placeholder" role="img" aria-label="関西学院前店の外観">店舗外観</div>
+                                <div class="store-card__placeholder" role="img" aria-label="関西学院前店の外観">Coming soon...</div>
                             </div>
                             <div class="store-card__content">
                                 <h3 class="store-card__name">関西学院前店</h3>
@@ -353,7 +356,7 @@
                         <!-- 店舗4: 尼崎店 -->
                         <div class="store-card">
                             <div class="store-card__image">
-                                <div class="store-card__placeholder" role="img" aria-label="尼崎店の外観">店舗外観</div>
+                                <div class="store-card__placeholder" role="img" aria-label="尼崎店の外観">Coming soon...</div>
                             </div>
                             <div class="store-card__content">
                                 <h3 class="store-card__name">尼崎店</h3>

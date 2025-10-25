@@ -5,11 +5,19 @@ export const newsData = [
         day: '',
         month: '11月',
         title: '大革命マークを集めてお得をゲット',
-        excerpt: '大革命マークを集めて素敵なプレゼントをゲットしよう！<br>3枚で100円のトッピング1つ無料、5枚で唐揚げ無料、10枚で釜玉無料、15枚で肉味噌無料と、<br>集めるほどお得な特典をご用意しております。',
+        excerpt: '大革命マークを集めて素敵なプレゼントをゲットしよう！<br>3枚で100円のトッピング1つ無料、5枚で唐揚げ無料、10枚で釜玉無料、13枚で肉味噌無料と、<br>集めるほどお得な特典をご用意しております。<br><span style="color: #999; font-weight: 600;">※関西学院大学前店限定</span>',
         category: 'キャンペーン'
     },
     {
         id: '2',
+        day: '',
+        month: '11月',
+        title: '麺増量キャンペーン実施中',
+        excerpt: '並盛りのご注文で大盛り、W盛りに変更可能！<br>食券をお渡しの際に店員にお声がけください♪<br>より多くの麺でお腹いっぱいお楽しみください。<br><span style="color: #999; font-weight: 600;">※尼崎店、六甲道店、神戸総本店、金閣寺店、三宮店、岸和田店限定</span>',
+        category: 'キャンペーン'
+    },
+    {
+        id: '3',
         day: '',
         month: '11月',
         title: '六甲道店閉店のお知らせ',
@@ -17,7 +25,7 @@ export const newsData = [
         category: '店舗情報'
     },
     {
-        id: '3',
+        id: '4',
         day: '',
         month: '10月',
         title: 'TKG1杯無料キャンペーン実施中',
@@ -25,7 +33,7 @@ export const newsData = [
         category: 'キャンペーン'
     },
     {
-        id: '4',
+        id: '5',
         day: '',
         month: '10月',
         title: '営業時間変更のお知らせ',
@@ -47,12 +55,24 @@ export const newsDetailData = {
                 <li><strong>3枚</strong> → 100円のトッピング1つ無料</li>
                 <li><strong>5枚</strong> → 唐揚げ無料</li>
                 <li><strong>10枚</strong> → 釜玉無料</li>
-                <li><strong>15枚</strong> → 肉味噌無料</li>
+                <li><strong>13枚</strong> → 肉味噌無料</li>
             </ul>
             <p>集めるほどお得な特典をご用意しております。ぜひご参加ください！</p>
+            <p><strong style="color: #999;">※関西学院大学前店限定キャンペーンです</strong></p>
         `
     },
     '2': {
+        month: '11月',
+        title: '麺増量キャンペーン実施中',
+        category: 'キャンペーン',
+        body: `
+            <p>並盛りのご注文で大盛り、W盛りに変更可能！</p>
+            <p>食券をお渡しの際に店員にお声がけください♪</p>
+            <p>より多くの麺でお腹いっぱいお楽しみください。</p>
+            <p><strong style="color: #999;">※尼崎店、六甲道店、神戸総本店、金閣寺店、三宮店、岸和田店限定キャンペーンです</strong></p>
+        `
+    },
+    '3': {
         month: '11月',
         title: '六甲道店閉店のお知らせ',
         category: '店舗情報',
@@ -62,7 +82,7 @@ export const newsDetailData = {
             <p>他の店舗では引き続きサービスを提供しておりますので、ぜひご利用ください。</p>
         `
     },
-    '3': {
+    '4': {
         month: '10月',
         title: 'TKG1杯無料キャンペーン実施中',
         category: 'キャンペーン',
@@ -71,7 +91,7 @@ export const newsDetailData = {
             <p>期間限定の特別キャンペーンですので、この機会をお見逃しなく！</p>
         `
     },
-    '4': {
+    '5': {
         month: '10月',
         title: '営業時間変更のお知らせ',
         category: '営業時間',
@@ -82,8 +102,8 @@ export const newsDetailData = {
                 <li><strong>関西学院大学前店</strong><br>11時〜21時</li>
                 <li><strong>六甲道店</strong><br>17時〜21時半<br>木曜日定休日</li>
                 <li><strong>神戸総本店</strong><br>11時半〜15時半<br>17時〜22時<br>土日祝　11時半〜22時</li>
-                <li><strong>三宮店</strong><br>11時半〜15時半<br>17時〜22時<br>木曜日定休日</li>
-                <li><strong>岸和田店</strong><br>11時半〜15時半<br>17時〜21時半<br>木曜日定休日</li>
+                <li><strong>三宮店</strong><br>11時30分〜15時半<br>17時〜21時半</li>
+                <li><strong>岸和田店</strong><br>12時〜15時<br>18時〜21時</li>
             </ul>
         `
     }
