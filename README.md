@@ -176,12 +176,6 @@ ISC License
 
 プルリクエストやイシューの報告を歓迎します。
 
-## 📞 お問い合わせ
-
-- **ウェブサイト**: [大革命公式サイト](https://daikakumei.com)
-- **Instagram**: [@daikakumei_info](https://www.instagram.com/daikakumei_info/)
-- **採用担当**: 090-4271-7088 (平日 11:00〜18:00)
-- **GitHub**: [meercat-o6/daikakumei](https://github.com/meercat-o6/daikakumei)
 
 ## 🚀 デプロイ
 
